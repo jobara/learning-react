@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import UIO from './uio';
 
 function Square(props) {
     return (
@@ -134,10 +135,19 @@ function calculateWinner(squares) {
     return null;
 }
 
+function App(props) {
+    return (
+        <div>
+            <UIO />
+            <Game />
+        </div>
+    );
+}
+
 // ========================================
 
 ReactDOM.render(
-    <Game />,
+    <App />,
     document.getElementById('root')
 );
 
